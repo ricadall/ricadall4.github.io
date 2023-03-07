@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+	button::before, .soulmenu-style-horizontal a::before, .soulbuttons::before, .thefooter a::before {
+     background: rgba(33, 165, 222, 0)!important; 
+	}
+		
+	.omni-uuid, .text-field-2 {
+		display: none!important;
+		width: 27%!important;
+	}
+	.text-field {
+		margin-bottom: 0!important;
+		padding-bottom: 0!important;
+		padding-left: 5px!important;
+		border: 1px #000!important;
+		background-color: transparent!important;
+		font-size: 18px!important;
+	}
+	.w-input, .w-select {
+		display: block!important;
+		width: 100%!important;
+		height: 38px!important;
+		padding: 8px 12px!important;
+		margin-bottom: 10px!important;
+		font-size: 14px!important;
+		line-height: 1.42857143!important;
+		color: #333!important;
+		vertical-align: middle;
+		background-color: transparent!important;
+		border: 0px solid #ccc!important;
+	}
+			input.w-button {
+		-webkit-appearance: button!important;
+
+		border-color: transparent!important;
+		border-radius: 0px!important;
+		background: transparent!important;
+		color: white!important;
+		font-size: 12px!important;
+		font-size: 0.75rem!important;
+		line-height: 1!important;
+		padding: 0.6em 1em 0.4em!important;
+	}
+	.footersubmit {
+		background-color: transparent!important;
+		font-size: 17px!important;
+	}
+	.w-button {
+		display: inline-block!important;
+		padding: 0px 0px!important;
+		background-color: #3898ec!important;
+		color: #fff!important;
+		border: 0!important;
+		line-height: inherit!important;
+		text-decoration: none!important;
+		cursor: pointer;
+		border-radius: 0;
+	}
+			.footersignupwrap {
+		color: #fff;
+	}
+	</style>
+	
+	<style id='soulbuttons-inline-css' type='text/css'>
+.soulbuttons{
+			padding:.5rem 1rem;
+			border-width:3px;
+			}
+			.soulbuttons-solid-rounded, .soulbuttons-border-rounded{
+			border-radius:0px;
+			}
+			
+			.soulbuttons-transparent{
+				padding-left:0;
+				padding-right:0;
+				border:none!important;
+			}
+		
+		#soulbuttons-backdrop {
+			background-color: rgba(153,27,30, 0.1)!important;
+}
+</style>
+<style >
+@media (min-width: 0px) { html, body { font-size:12px !important; line-height:1.5 !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { html, body { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { html, body { font-size:15px !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { html, body { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { .display-2 { font-size:4.3rem !important; line-height:1.1 !important; margin:0 0 1.125rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { .display-2 { font-size:5.96rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { .display-2 { font-size:9.969rem !important; margin:0 0 1.2rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { .display-2 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { .display-3 { font-size:3.583rem !important; line-height:1.1 !important; margin:0 0 1.125rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { .display-3 { font-size:4.768rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { .display-3 { font-size:7.478rem !important; margin:0 0 1.2rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { .display-3 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { .display-4 { font-size:2.986rem !important; line-height:1.1 !important; margin:0 0 1.125rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { .display-4 { font-size:3.815rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { .display-4 { font-size:5.61rem !important; margin:0 0 1.2rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { .display-4 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { h1, .h1 { font-size:2.488rem !important; font-weight:300 !important; line-height:1.1 !important; margin:0 0 1.2375rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { h1, .h1 { font-size:3.052rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { h1, .h1 { font-size:4.209rem !important; margin:0 0 1.32rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { h1, .h1 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { h2, .h2 { font-size:2.074rem !important; font-weight:300 !important; line-height:1.2 !important; margin:0 0 1rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { h2, .h2 { font-size:2.441rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { h2, .h2 { font-size:3.157rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { h2, .h2 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { h3, .h3, .news-and-events-featured-item:nth-of-type(1) h5 { font-size:1.728rem !important; font-weight:400 !important; line-height:1.2 !important; margin:0 0 1rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { h3, .h3, .news-and-events-featured-item:nth-of-type(1) h5 { font-size:1.953rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { h3, .h3, .news-and-events-featured-item:nth-of-type(1) h5 { font-size:2.369rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { h3, .h3, .news-and-events-featured-item:nth-of-type(1) h5 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { .intro-paragraph { font-size:1.44rem !important; line-height:1.4 !important; margin:0 0 1.5rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { .intro-paragraph { font-size:1.563rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { .intro-paragraph { font-size:1.777rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { .intro-paragraph { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { .intro-paragraph > div { font-size:1.44rem !important; line-height:1.4 !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { .intro-paragraph > div { font-size:1.563rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { .intro-paragraph > div { font-size:1.777rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { .intro-paragraph > div { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { h4, .h4 { font-size:1.44rem !important; font-weight:300 !important; line-height:1.4 !important; margin:0 0 1rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { h4, .h4 { font-size:1.563rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { h4, .h4 { font-size:1.777rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { h4, .h4 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { p { font-size:1.2rem !important; font-weight:400 !important; line-height:1.5 !important; margin:0 0 1.5rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { p { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { p { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { p { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { li { font-size:1.2rem !important; font-weight:400 !important; line-height:1.5 !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { li { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { li { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { li { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { p > div { font-size:1.2rem !important; font-weight:400 !important; line-height:1.5 !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { p > div { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { p > div { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { p > div { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { .soulmenu a { font-size:1rem !important; font-weight:600 !important; letter-spacing:1px !important; text-transform:uppercase !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { .soulmenu a { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { .soulmenu a { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { .soulmenu a { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { h5, .h5 { font-size:1.2rem !important; font-weight:300 !important; margin:0 0 1rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { h5, .h5 { font-size:1.25rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { h5, .h5 { font-size:1.333rem !important; font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { h5, .h5 { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { .soulbuttons, button { font-size:1rem !important; font-weight:600 !important; letter-spacing:1px !important; text-transform:uppercase !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { .soulbuttons, button { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { .soulbuttons, button { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { .soulbuttons, button { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { .tinycopy, div.tinycopy p, .contrib-grid p { font-size:1rem !important; font-weight:400 !important; line-height:1.6 !important; margin:0 0 1.8rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { .tinycopy, div.tinycopy p, .contrib-grid p { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { .tinycopy, div.tinycopy p, .contrib-grid p { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { .tinycopy, div.tinycopy p, .contrib-grid p { font-family:europa, sans-serif !important; } }
+@media (min-width: 0px) { .tinycopy > div { font-size:1rem !important; font-weight:400 !important; line-height:1.6 !important; } }
+@media (min-width: 768px) { .tinycopy > div { margin:0rem !important; } }
+@media (min-width: 992px) { .tinycopy > div { } }
+@media (min-width: 1300px) { .tinycopy > div { } }
+@media (min-width: 0px) { em { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 768px) { em { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 992px) { em { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 1300px) { em { font-family:big-caslon-fb, serif !important; } }
+@media (min-width: 0px) { h6 { font-size:1rem !important; font-weight:600 !important; line-height:1.5 !important; letter-spacing:1px !important; text-transform:uppercase !important; margin:0 0 1rem !important; font-family:europa, sans-serif !important; } }
+@media (min-width: 768px) { h6 { font-family:europa, sans-serif !important; } }
+@media (min-width: 992px) { h6 { font-family:europa, sans-serif !important; } }
+@media (min-width: 1300px) { h6 { font-family:europa, sans-serif !important; } }
+	
+
+		</style>
+
+	
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Home - USC Brain Health Observatory</title>
+   
+
+
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://techandsociety.georgetown.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='example-lib-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/css/soulnavstyles.css?ver=1.3.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='flickity-css-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/css/flickity.css?ver=1.3.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancy-css-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/css/jquery.fancybox.min.css?ver=1.3.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fl-builder-layout-9-css'  href='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/9-layout.css?ver=a4d269cbd64a2e9ce654cbec901be240' type='text/css' media='all' />
+<link rel='stylesheet' id='fts-feeds-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/feed-them-social/feeds/css/styles.css?ver=2.6.9' type='text/css' media='' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/types/vendor/toolset/toolset-common/res/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='soulbuttons-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/soulbuttons/soulbuttons.css?ver=1.3.0.0' type='text/css' media='all' />
+
+<link rel='stylesheet' id='soulmenu-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/soulmenu/soulmenu.css?ver=1.3.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='soultype2-font-0-css'  href='https://use.typekit.net/wfh4bhp.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://techandsociety.georgetown.edu/wp-content/themes/gsr01/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gsr01-style-css'  href='https://techandsociety.georgetown.edu/wp-content/themes/gsr01-child/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://techandsociety.georgetown.edu/wp-includes/css/dashicons.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='toolset-select2-css-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/types/vendor/toolset/toolset-common/res/lib/select2/select2.css?ver=5.2.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.6-78496d1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='views-pagination-style-css'  href='https://techandsociety.georgetown.edu/wp-content/plugins/wp-views/embedded/res/css/wpv-pagination.css?ver=2.7.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/bb-plugin/js/jquery.waypoints.min.js?ver=2.2.3.3'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/ScrollToPlugin.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/jquery.fancybox.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/ScrollMagic.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/feed-them-social/feeds/js/powered-by.js?ver=2.6.9'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/feed-them-social/feeds/js/fts-global.js?ver=2.6.9'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/waypoints.debug.js?ver=5.2.2'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulMagic/assets/js/soulmagic.js?ver=5.2.2'></script>
+<script type='text/javascript'>
+            function SoulMagic_SoulButton( obj, no, args ) {
+                SoulMagic_Base.call(this, obj, no, args);
+            }
+</script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='/content-transition.js'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulMagic/assets/libraries/DrawSVGPlugin.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulMagic/assets/libraries/SplitText.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/soulbuttons/soulbuttons.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/soulmenu/soulmenu.js?ver=1.3.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var soulsections2_library = {"Background-Banner-A":"http:\/\/placehold.it\/350x150\/0","Background-Banner-B":"http:\/\/placehold.it\/350x150\/1","Background-Banner-C":"http:\/\/placehold.it\/350x150\/2","Background-Banner-D":"http:\/\/placehold.it\/350x150\/3","Background-Banner-E":"http:\/\/placehold.it\/350x150\/4","Background-Banner-F":"http:\/\/placehold.it\/350x150\/5","Background-Banner-G":"http:\/\/placehold.it\/350x150\/6","Background-Banner-H-Hayden":"http:\/\/placehold.it\/350x150\/7","Background-Banner-I-Hayden":"http:\/\/placehold.it\/350x150\/8","Background-Banner-J-Hayden":"http:\/\/placehold.it\/350x150\/9","Background-Multiple-A":"http:\/\/placehold.it\/350x150\/10","Background-Multiple-B":"http:\/\/placehold.it\/350x150\/11","Carousel-A":"http:\/\/placehold.it\/350x150\/12","Carousel-B":"http:\/\/placehold.it\/350x150\/13","Carousel-C":"http:\/\/placehold.it\/350x150\/14","Carousel-D":"http:\/\/placehold.it\/350x150\/15","Carousel-E":"http:\/\/placehold.it\/350x150\/16","Carousel-F":"http:\/\/placehold.it\/350x150\/17","Carousel-G":"http:\/\/placehold.it\/350x150\/18","Combination-A":"http:\/\/placehold.it\/350x150\/19","Combination-B":"http:\/\/placehold.it\/350x150\/20","Combination-C":"http:\/\/placehold.it\/350x150\/21","Combination-D-Hayden":"http:\/\/placehold.it\/350x150\/22","Combination-E-Hayden":"http:\/\/placehold.it\/350x150\/23","Combination-F-Hayden":"http:\/\/placehold.it\/350x150\/24","Combination-G":"http:\/\/placehold.it\/350x150\/25","Combination-H":"http:\/\/placehold.it\/350x150\/26","Footer-A":"http:\/\/placehold.it\/350x150\/27","Navigation-System-A":"http:\/\/placehold.it\/350x150\/28","Post-Loop-A":"http:\/\/placehold.it\/350x150\/29","Post-Loop-B":"http:\/\/placehold.it\/350x150\/30","Text-Banner-A":"http:\/\/placehold.it\/350x150\/31","Text-Banner-B":"http:\/\/placehold.it\/350x150\/32","Text-Banner-C":"http:\/\/placehold.it\/350x150\/33","Text-Banner-D":"http:\/\/placehold.it\/350x150\/34","Text-Image-Banner-A":"http:\/\/placehold.it\/350x150\/35","Text-Image-Banner-B":"http:\/\/placehold.it\/350x150\/36","Text-Image-Banner-C":"http:\/\/placehold.it\/350x150\/37","Text-Image-Banner-D":"http:\/\/placehold.it\/350x150\/38","Text-Image-Banner-E":"http:\/\/placehold.it\/350x150\/39","Text-Image-Banner-F":"http:\/\/placehold.it\/350x150\/40","Text-Image-Banner-G":"http:\/\/placehold.it\/350x150\/41","Text-Image-Banner-H":"http:\/\/placehold.it\/350x150\/42","Text-Image-Multiple-A":"http:\/\/placehold.it\/350x150\/43","Text-Image-Multiple-B":"http:\/\/placehold.it\/350x150\/44","Text-Image-Multiple-C":"http:\/\/placehold.it\/350x150\/45","Text-Multiple-A":"http:\/\/placehold.it\/350x150\/46","Text-Multiple-B":"http:\/\/placehold.it\/350x150\/47"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/soulsections2-library.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/themes/gsr01-child/js/scripts.js?ver=5.2.2'></script>
+
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<link rel='https://api.w.org/' href='https://techandsociety.georgetown.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://techandsociety.georgetown.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://techandsociety.georgetown.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel='shortlink' href='https://techandsociety.georgetown.edu/' />
+<link rel="alternate" type="application/json+oembed" href="https://techandsociety.georgetown.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftechandsociety.georgetown.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://techandsociety.georgetown.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftechandsociety.georgetown.edu%2F&#038;format=xml" />
+	<link rel="prefetch" href="https://techandsociety.georgetown.edu/wp-content/uploads/2018/11/44786625455_fbffd06f18_o.jpg" />
+
+		
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="home page-template-default page page-id-9 fl-builder group-blog">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+	
+
+	
+	<link rel='stylesheet' id='fl-builder-layout-3125-css'  href='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/3125-layout-partial.css?ver=d7ba8813d4c7a4bf0998c577f298f0e6' type='text/css' media='all' />
+<div class="fl-builder-content fl-builder-content-3125 fl-builder-global-templates-locked" data-post-id="3125"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5c9be92234182 header-row" data-node="5c9be92234182">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5c9be9223417b" data-node="5c9be9223417b">
+			<div class="fl-col fl-node-5c9be9223417f" data-node="5c9be9223417f">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5c9be92234180 offset-element" data-node="5c9be92234180">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="true" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="true" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   >
+<div class="ss-subsection icon" 
+
+	
+
+   data-index="0"style="width:100%"
+>
+
+  <div class="ss-background-container" style="width:150%"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container"></div>	<div class="ss-foreground-image-container" style="width:150%">	<div class="ss-foreground-image-caption"><p><a class="lightlogo" href="/index.html"><img src="assets/logo2.1.png" alt="" /></a><a class="darklogo" href="/index.html"><img src="assets/logo2.1.png" alt="" /></a></p>
+</div></div>
+      
+
+
+  <div class="ss-core">
+  
+  </div>
+
+</div>
+<div class="ss-subsection globalnav" 
+
+	
+
+   data-index="1"style=""
+>
+
+  <div class="ss-background-container"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container"></div>
+
+
+  <div class="ss-core">
+  <div class="ss-text-container"><p><div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu soulmenu soulmenu-style-horizontal"><li id="menu-item-3384" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3384"><a href="/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-3382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3382"><a href="/about.html">About Us</a></li>
+	<li id="menu-item-3381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3381"><a href="/people.html">People</a></li>
+	<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3383"><a href="https://giveto.usc.edu/">Donate</a></li>
+	<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3383"><a href="/sponsor.html">Sponsor</a></li>
+</ul>
+</li>
+<li id="menu-item-3364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3364"><a href="/">Research</a>
+<ul class="sub-menu">
+	<li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="/thera.html">Therapeutic Areas</a></li>
+	<li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="/researchareas.html">Research Topics</a></li>
+	<li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="/countrystudies.html">Country Studies</a></li>
+	<li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="/publications.html">Publications</a></li>
+</ul>
+</li>
+<li id="menu-item-3871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3871"><a href="/data.html">Data</a></li>
+<li id="menu-item-3181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3181"><a href="/news.html">News</a></li>
+</ul></div></p></div>
+  </div>
+
+</div>
+<div class="ss-subsection menuicon" 
+
+	
+
+   data-index="2"style=""
+>
+
+  <div class="ss-background-container"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container" ></div>
+
+
+  <div class="ss-core">
+  <div class="ss-text-container"><p><a style="background-color:transparent; color:#fff; border-color:transparent;" class="soulbuttons soulbuttons-transparent soulbuttons-prevent-default soulbuttons-unwrap" href="#" data-target=".sidenav" data-effect="slideOverFromRight" data-open="" id="">Menu<i class="fa fa-bars soulbuttons-icon soulbuttons-icon-after"></i></a></p>
+</div>
+  </div>
+
+</div>
+
+<!-- 	END MULTIPLE SECTIONS -->
+</div>	</div>
+</div>
+<div class="fl-module fl-module-gsr-soulsections fl-node-5c9be92234181 sidenav" data-node="5c9be92234181">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="true" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   ><div class="ss-background-container"><div class="ss-background-container-inner" data-src=""></div></div><div class="ss-background-overlay-container"></div>
+
+<div class="ss-subsection"data-index="0" style="background-color:rgb(153,27,30,1)!important;">
+    <div class="ss-core">
+  <div class="ss-text-container"><p><div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu soulmenu soulmenu-style-horizontal"><li id="menu-item-3384" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3384"><a href="/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-3382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3382"><a href="/about.html">About Us</a></li>
+	<li id="menu-item-3381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3381"><a href="/people.html">People</a></li>
+	<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3383"><a href="https://giveto.usc.edu/">Donate</a></li>
+	<li id="menu-item-3383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3383"><a href="/sponsor.html">Sponsor</a></li>
+</ul>
+</li>
+<li id="menu-item-3364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3364"><a href="/">Research</a>
+<ul class="sub-menu">
+	<li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="/thera.html">Therapeutic Areas</a></li>
+	<li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="/researchareas.html">Research Topics</a></li>
+	<li id="menu-item-3721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3721"><a href="/countrystudies.html">Country Studies</a></li>
+	<li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="/publications.html">Publications</a></li>
+</ul>
+</li>
+<li id="menu-item-3871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3871"><a href="/data.html">Data</a></li>
+<li id="menu-item-3181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3181"><a href="/news.html">News</a></li>
+</ul></div></p></div>
+  </div>
+
+
+</div><!-- end .ss-subsection -->
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>		
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+<article id="post-9" class="post-9 page type-page status-publish hentry">
+	<header class="entry-header"></header>
+
+	<div class="entry-content">
+
+		
+		<div class="fl-builder-content fl-builder-content-9 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="9"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5c9bcdcca8042" data-node="5c9bcdcca8042">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5c9bcdcca803c" data-node="5c9bcdcca803c">
+			<div class="fl-col fl-node-5c9bcdcca8040" data-node="5c9bcdcca8040">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5c9bcdcca8041 my-module" data-node="5c9bcdcca8041">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container soulmagic-timeline-four-fades-with-background-scale" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="true" data-mediumscreens-subsectionflex-enabled="true" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1" data-background-parallax="true"  ><div class="ss-background-container"><div class="ss-background-container-inner" data-src=""><video autoplay loop muted playsinline><source src="assets/mixkit-brain-scan-on-a-monitor-5839-medium.mp4" type="video/mp4">
+
+      </video></div></div><div class="ss-background-overlay-container" style="background-color:rgba(153,27,30,0.7)!important;"></div>
+
+<div class="ss-subsection"
+
+   data-index="0"
+>
+
+  
+  <div class="ss-core">
+
+  <div class="ss-tagline-container"><h2 class="h1" style="color:white!important;font-family:adobe caslon pro!important">Making research and data on brain disorder available and accessible. </h2></div>
+  </div>
+
+</div><!-- end .ss-subsection -->
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5ca4e5430e3ee" data-node="5ca4e5430e3ee">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5ca4e5430e3e3" data-node="5ca4e5430e3e3">
+			<div class="fl-col fl-node-5ca4e5430e3eb" data-node="5ca4e5430e3eb">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5ca4e5430e3ec" data-node="5ca4e5430e3ec">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container soulmagic-timeline-overlay-reveal soulmagic-timeline-four-fades-with-background-scale" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="false" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="true" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   ><div class="ss-background-container"><div class="ss-background-container-inner" data-src=""></div></div><div class="ss-background-overlay-container"></div>
+
+<div class="ss-subsection"data-index="0">
+	
+  	<div class="ss-foreground-image-container">	<div style="overflow: hidden;">
+		
+		<center>
+		
+		<video playsinline autoplay preload="auto" loop="loop" muted="muted" volume="0" style="width:60%;"><source src="assets/mribg3.mp4" type="video/mp4" style=""  >
+
+		</video>
+		</center>
+		
+		</div><div class="ss-foreground-image-overlay-container" ></div></div>
+      
+  <div class="ss-core">
+
+  <div class="ss-tagline-container">
+	  <h5>Our Vision</h5>
+	  <h2>To make research and data on brain disorder available and accessible.</h2>
+	  <p>We realize this vision in three ways:</p><ul><li style="margin-bottom: 1rem;" aria-level="1"><span style="font-weight: 400;"> We conduct country studies on health system preparedness for memory care and health services.</span></li><li style="margin-bottom: 1rem;" aria-level="1"><span style="font-weight: 400;"> We conduct economics studies on treatment of brain disorders.</span></li><li style="margin-bottom: 1rem;" aria-level="1"><span style="font-weight: 400;"> We publish data on care infrastructure for brain disorders and projections of the burden of those conditions.</span></li></ul>
+	  </div>
+  </div>
+
+</div>
+<!--end .ss-subsection -->
+</div>	</div>
+</div>
+<div id="ourmission" class="fl-module fl-module-gsr-soulsections fl-node-5ca6b40e64fa0" data-node="5ca6b40e64fa0">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container soulmagic-timeline-home-px2 soulmagic-timeline-four-fades-with-background-scale" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="false" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="true" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   ><div class="ss-background-container"><div class="ss-background-container-inner" data-src=""></div></div><div class="ss-background-overlay-container"></div>
+
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5c9c3206ceac5" data-node="5c9c3206ceac5">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5c9c3206ceabd" data-node="5c9c3206ceabd">
+			<div class="fl-col fl-node-5c9c3206ceac2" data-node="5c9c3206ceac2">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5c9c3206ceac4" data-node="5c9c3206ceac4">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container soulmagic-timeline-four-fades-with-background-scale" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="true" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   ><div class="ss-background-container"><div class="ss-background-container-inner" data-src=""></div></div><div class="ss-background-overlay-container"></div>
+
+<div class="ss-subsection"data-index="0">
+  
+  <div class="ss-core">
+
+  <div class="ss-tagline-container"><h2 class="h3">The USC Brain Health Observatory thanks our sponsors:</h2></div>
+  </div>
+
+</div><!-- end .ss-subsection -->
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5c9be70e04389" data-node="5c9be70e04389">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5c9be70e04383" data-node="5c9be70e04383">
+			<div class="fl-col fl-node-5c9be70e04386" data-node="5c9be70e04386">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5c9be70e04388" data-node="5c9be70e04388">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container soulmagic-timeline-partner-logos" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="true" data-mediumscreens-containerflex-enabled="" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"   >
+
+<div class="ss-subsection item-one" data-index="1"style="">
+
+  <div class="ss-background-container"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container"></div>	<div class="ss-foreground-image-container"> <img class="ss-foreground-image" src="assets/gu-es1.png" alt="" />	<div class="ss-foreground-image-caption"></div></div>
+
+
+  <div class="ss-core">
+  
+  </div>
+
+</div>
+<div class="ss-subsection item-one" data-index="2"style="">
+
+  <div class="ss-background-container"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container"></div>	<div class="ss-foreground-image-container"> <img class="ss-foreground-image" src="assets/gu-nova1.png" alt="" />	<div class="ss-foreground-image-caption"></div></div>
+      
+
+
+  <div class="ss-core">
+  
+  </div>
+
+</div>
+
+
+<!-- 	END MULTIPLE SECTIONS -->
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>	</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+
+
+	</div><!-- #content -->
+
+
+	
+	
+</div><!-- #page -->
+<link rel='stylesheet' id='fl-builder-layout-3162-css'  href='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/3162-layout-partial.css?ver=c757c27d5fb7a1813318c658d7a85916' type='text/css' media='all' />
+
+<div class="fl-builder-content fl-builder-content-3162 fl-builder-global-templates-locked" data-post-id="3162" style="background-color:#282828!important"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5c9d0c7257cca" data-node="5c9d0c7257cca" style="background-color:#282828!important">
+	<div class="fl-row-content-wrap" style="background-color:#282828!important">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5c9d0c7257cc2" data-node="5c9d0c7257cc2">
+			<div class="fl-col fl-node-5c9d0c7257cc7" data-node="5c9d0c7257cc7">
+	<div class="fl-col-content fl-node-content" style="background-color:#282828!important">
+	<div class="fl-module fl-module-gsr-soulsections fl-node-5c9d0c7257cc9 thefooter" data-node="5c9d0c7257cc9" style="background-color:#282828!important">
+	<div class="fl-module-content fl-node-content">
+		<div class="ss-container" data-parent-column-override="false" data-parent-column-width="" data-contains-soulmenu="false" data-used-for-localnav="false" data-prepend-background-to-fic="" data-lazyload-background-image="false" data-lazyload-foreground-image="false" data-mediumscreens-containergrid-enabled="false" data-containerflex-enabled="true" data-mediumscreens-containerflex-enabled="true" data-largescreens-containerflex-enabled="" data-subsectionflex-enabled="" data-mediumscreens-subsectionflex-enabled="" data-largescreens-subsectionflex-enabled="" data-coreflex-enabled="" data-mediumscreens-coreflex-enabled="" data-largescreens-coreflex-enabled="" data-tabletfixed="false" data-pinfgic="false" data-carousel-arrows-position="sides"     data-flickityfadespeed="1"  style="background-color:#282828!important" >
+<div class="ss-subsection item-one" data-index="0"style="">
+
+  <div class="ss-background-container"><div class="ss-background-container-inner" style="background-image:url()"></div></div><div class="ss-background-overlay-container"></div>	<div class="ss-foreground-image-container" style="padding-bottom:0%;margin-bottom:0%;margin-top:-5%"> <img class="ss-foreground-image" src="assets/duallogo1.png" alt="" />	<div class="ss-foreground-image-caption"></div></div>
+      
+
+
+  <div class="ss-core">
+	  <div class="ss-cta-container" style="margin-bottom:-3%"><h7 class="tinycopy"> 635 Downey Way, Los Angeles, CA 90089</h7>
+</div>
+  <div class="ss-cta-container"><h7 class="tinycopy"> Tel: (213) 821-1850 | Fax: (213) 821-2716 | <a style="text-decoration:underline!important" href="mailto:mattke@usc.edu">mattke@usc.edu</a></h7>
+</div>
+  </div>
+
+</div>
+			
+
+			
+<div class="ss-subsection item-two" data-index="1"style="">
+
+	
+	<div data-brackets-id="141513" class="et_pb_text_inner" style="color:white;margin-bottom:5%">
+					<h3 data-brackets-id="141514" style="color:white">Sign up for our Newsletter</h3>
+<h7 data-brackets-id="141515" >Stay up to date with the latest news from the USC Brain Health Observatory.</h7></div>
+	
+	
+	  <link href="https://assets.website-files.com/61119966db9a2a73c9b9856e/css/website-3-0-f95bd9.webflow.36314f7d3.min.css" rel="stylesheet" type="text/css"/>
+	  <div class="footerform w-form"><form id="wf-form-Footer-Signup-Form" name="wf-form-Footer-Signup-Form" data-name="Footer Signup Form" method="get" class="form" aria-label="Footer Signup Form" data-gtm-vis-recent-on-screen-55785653_44="2535" data-gtm-vis-first-on-screen-55785653_44="2535" data-gtm-vis-total-visible-time-55785653_44="100" data-gtm-vis-has-fired-55785653_44="1"><input type="email" class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Email" id="email-2" required=""><input type="submit" value="→" data-wait="Please wait..." data-event-action="Footer Submission" class="footersubmit omni-ga w-button"></form><div class="w-form-done" tabindex="-1" role="region" aria-label="Footer Signup Form success"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail" tabindex="-1" role="region" aria-label="Footer Signup Form failure"><div>Oops! Something went wrong while submitting the form.</div></div></div>
+	  
+<!--	  </div>-->
+  </div>
+
+</div>
+
+<!-- 	END MULTIPLE SECTIONS -->
+</div>	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+
+
+	<link rel="stylesheet" id="df-lib-styles-css" href="https://atri.usc.edu/wp-content/plugins/diviflash/public/css/lib/df_lib_styles.css?ver=1.1.7" type="text/css" media="all">
+	
+
+<script type="text/html" id="tmpl-wp-playlist-current-item">
+	<# if ( data.image ) { #>
+	<img src="{{ data.thumb.src }}" alt="" />
+	<# } #>
+	<div class="wp-playlist-caption">
+		<span class="wp-playlist-item-meta wp-playlist-item-title">
+		&#8220;{{ data.title }}&#8221;		</span>
+		<# if ( data.meta.album ) { #><span class="wp-playlist-item-meta wp-playlist-item-album">{{ data.meta.album }}</span><# } #>
+		<# if ( data.meta.artist ) { #><span class="wp-playlist-item-meta wp-playlist-item-artist">{{ data.meta.artist }}</span><# } #>
+	</div>
+</script>
+<script type="text/html" id="tmpl-wp-playlist-item">
+	<div class="wp-playlist-item">
+		<a class="wp-playlist-caption" href="{{ data.src }}">
+			{{ data.index ? ( data.index + '. ' ) : '' }}
+			<# if ( data.caption ) { #>
+				{{ data.caption }}
+			<# } else { #>
+				<span class="wp-playlist-item-title">
+				&#8220;{{{ data.title }}}&#8221;				</span>
+				<# if ( data.artists && data.meta.artist ) { #>
+				<span class="wp-playlist-item-artist"> &mdash; {{ data.meta.artist }}</span>
+				<# } #>
+			<# } #>
+		</a>
+		<# if ( data.meta.length_formatted ) { #>
+		<div class="wp-playlist-item-length">{{ data.meta.length_formatted }}</div>
+		<# } #>
+	</div>
+</script>
+	
+<div id="views-extra-css-ie7" style="display:none;" aria-hidden="true"></div>
+
+<script type="text/javascript">
+jQuery( document ).ready( function( $ ) {
+	var extra_css = $( "#views-extra-css" ) ? $( "#views-extra-css" ).text() : null;	if( extra_css ) {		$( 'head' ).append( '<style>' + extra_css + '</style>' );
+		$( "#views-extra-css" ).remove();	}
+	$( 'head' ).append( $( "#views-extra-css-ie7" ).html() );
+	$( "#views-extra-css-ie7" ).remove();});
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/mixitup.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/mixitup-multifilter.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/flickity.pkgd.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/masonry.pkgd.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/jquery.ba-throttle-debounce.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/jquery.matchHeight-min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/jquery.lazy.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/animation.gsap.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/SoulSections2/gsr-soulsections/js/jquery.ScrollMagic.min.js?ver=1.3.0.0'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/9-layout.js?ver=a4d269cbd64a2e9ce654cbec901be240'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/themes/gsr01/js/navigation.js?ver=20151215'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/themes/gsr01/js/soulfade.js?ver=20151215'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/themes/gsr01/js/skip-link-focus-fix.js?ver=20151215'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/jquery/suggest.min.js?ver=1.1-20110113'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/types/vendor/toolset/toolset-common/toolset-forms/js/main.js?ver=0.1.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wptDateData = {"buttonImage":"https:\/\/techandsociety.georgetown.edu\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/images\/calendar.gif","buttonText":"Select date","dateFormat":"MM d, yy","dateFormatPhp":"F j, Y","dateFormatNote":"Input format: F j, Y","yearMin":"1583","yearMax":"3000","ajaxurl":"https:\/\/techandsociety.georgetown.edu\/wp-admin\/admin-ajax.php","readonly":"This is a read-only date input","readonly_image":"https:\/\/techandsociety.georgetown.edu\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/images\/calendar-readonly.gif","datepicker_style_url":"https:\/\/techandsociety.georgetown.edu\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/types/vendor/toolset/toolset-common/toolset-forms/js/date.js?ver=0.1.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/wp-util.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/mediaelement/wp-playlist.min.js?ver=5.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpv_pagination_local = {"front_ajaxurl":"https:\/\/techandsociety.georgetown.edu\/wp-admin\/admin-ajax.php","calendar_image":"https:\/\/techandsociety.georgetown.edu\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"resize_debounce_tolerance":"100","datepicker_style_url":"https:\/\/techandsociety.georgetown.edu\/wp-content\/plugins\/types\/vendor\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css","wpmlLang":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/plugins/wp-views/embedded/res/js/wpv-pagination-embedded.js?ver=2.7.5'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/3125-layout-partial.js?ver=d7ba8813d4c7a4bf0998c577f298f0e6'></script>
+<script type='text/javascript' src='https://techandsociety.georgetown.edu/wp-content/uploads/bb-plugin/cache/3162-layout-partial.js?ver=c757c27d5fb7a1813318c658d7a85916'></script>
+
+
+</html>
